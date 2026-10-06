@@ -40,11 +40,9 @@
     .navlinks { flex-wrap:wrap !important; gap:16px !important; justify-content:flex-end; }
     header { padding:64px 20px 56px !important; }
     .hero-grid { grid-template-columns:1fr !important; gap:40px !important; }
-    .hero-photo { max-width:300px; }
     section, footer { padding-left:20px !important; padding-right:20px !important; }
     .case-two { grid-template-columns:1fr !important; }
     .case-two > .case-left { border-right:none !important; border-bottom:1px solid #1c242e; }
-    .projects-grid { grid-template-columns:1fr !important; }
     .skills-grid { grid-template-columns:1fr !important; }
     .research-grid { grid-template-columns:1fr !important; gap:16px !important; }
     h1 { font-size:40px !important; }
@@ -59,7 +57,6 @@
     <div style="font-family:'JetBrains Mono',monospace; font-size:14px; color:#4ade80;">~/levi-benzecry <span style="animation:blink 1.1s infinite;">▮</span></div>
     <div class="navlinks" style="display:flex; align-items:center; gap:28px;">
       <a id="navWork" href="#work" class="navlink" style="font-family:'JetBrains Mono',monospace; font-size:13px; color:#8b96a5;"></a>
-      <a id="navProjects" href="#projects" class="navlink" style="font-family:'JetBrains Mono',monospace; font-size:13px; color:#8b96a5;"></a>
       <a id="navSkills" href="#skills" class="navlink" style="font-family:'JetBrains Mono',monospace; font-size:13px; color:#8b96a5;"></a>
       <a id="navJourney" href="#journey" class="navlink" style="font-family:'JetBrains Mono',monospace; font-size:13px; color:#8b96a5;"></a>
       <a id="navContact" href="#contact" class="navlink" style="font-family:'JetBrains Mono',monospace; font-size:13px; color:#8b96a5;"></a>
@@ -68,7 +65,7 @@
   </nav>
 
   <!-- HERO -->
-  <header class="hero-grid" style="max-width:1080px; margin:0 auto; padding:96px 40px 80px; display:grid; grid-template-columns:1fr 300px; gap:64px; align-items:center;">
+  <header class="hero-grid" style="max-width:1080px; margin:0 auto; padding:96px 40px 80px; display:grid; grid-template-columns:1fr; align-items:center;">
     <div style="animation:fadeUp .7s ease both;">
       <div style="font-family:'JetBrains Mono',monospace; font-size:14px; color:#4ade80; margin-bottom:20px;">$ whoami</div>
       <h1 style="font-size:56px; font-weight:700; color:#f2f5f8; margin:0 0 16px; letter-spacing:-0.02em; line-height:1.05;">Levi Benzecry</h1>
@@ -77,14 +74,6 @@
       <div style="display:flex; gap:14px; flex-wrap:wrap;">
         <a id="ctaWork" href="#work" class="btn-primary" style="font-family:'JetBrains Mono',monospace; font-size:14px; color:#0a0e12; background:#4ade80; padding:12px 22px; border-radius:4px; font-weight:700;"></a>
         <a href="https://github.com/LeviBenzecry19" target="_blank" rel="noopener" class="btn-ghost" style="font-family:'JetBrains Mono',monospace; font-size:14px; color:#d4dae2; border:1px solid #2a3644; padding:12px 22px; border-radius:4px;">GitHub →</a>
-      </div>
-    </div>
-    <div style="position:relative; animation:fadeUp .7s .15s ease both;">
-      <div style="position:absolute; inset:-14px -14px 14px 14px; border:1px solid #2a3644; border-radius:8px;"></div>
-      <img class="hero-photo" src="assets/levi.png" alt="Levi Benzecry" style="position:relative; width:100%; border-radius:8px; display:block; filter:saturate(.85) contrast(1.05); border:1px solid #2a3644;">
-      <div style="position:absolute; bottom:-12px; left:16px; background:#0f141a; border:1px solid #2a3644; border-radius:4px; padding:8px 14px; font-family:'JetBrains Mono',monospace; font-size:12px; color:#8b96a5; display:flex; align-items:center; gap:8px;">
-        <span style="width:8px; height:8px; border-radius:50%; background:#4ade80; animation:pulseDot 2s infinite; display:inline-block;"></span>
-        Belo Horizonte, BR
       </div>
     </div>
   </header>
@@ -147,14 +136,6 @@
     </div>
   </section>
 
-  <!-- SELECTED WORK -->
-  <section id="projects" style="max-width:1080px; margin:0 auto; padding:56px 40px;">
-    <div style="font-family:'JetBrains Mono',monospace; font-size:13px; color:#4ade80; margin-bottom:12px;">$ ls ./projects</div>
-    <h2 id="projectsTitle" style="font-size:36px; font-weight:700; color:#f2f5f8; margin:0 0 12px; letter-spacing:-0.02em;"></h2>
-    <p id="projectsSubtitle" style="font-size:16px; color:#8b96a5; margin:0 0 40px; max-width:640px; line-height:1.6; text-wrap:pretty;"></p>
-    <div id="projectsGrid" class="projects-grid" style="display:grid; grid-template-columns:repeat(2, 1fr); gap:20px;"></div>
-  </section>
-
   <!-- SKILLS -->
   <section id="skills" style="max-width:1080px; margin:0 auto; padding:56px 40px;">
     <div style="font-family:'JetBrains Mono',monospace; font-size:13px; color:#4ade80; margin-bottom:12px;">$ ls ./skills</div>
@@ -199,7 +180,7 @@
 
 <script>
   const pt = {
-    navWork: 'trabalho', navProjects: 'projetos', navSkills: 'skills', navJourney: 'trajetória', navContact: 'contato',
+    navWork: 'trabalho', navSkills: 'skills', navJourney: 'trajetória', navContact: 'contato',
     perYear: 'ano', perDay: 'dia',
     role: 'Desenvolvedor de Software Full Stack',
     heroTagline: 'Construo produtos completos que movem métricas de negócio — do anúncio à landing page, do CRM ao ERP. Autodidata em toda a stack, entreguei sozinho uma plataforma de gestão de obras em produção. Agora quero levar essa autonomia para um time forte.',
@@ -222,14 +203,6 @@
     caseStatAds: 'de ROI anual em campanhas de tráfego pago para clientes',
     caseStatSolo: 'concebido e entregue por um único desenvolvedor',
     caseStatAuto: 'economizadas na operação diária com automações',
-    projectsTitle: 'Trabalhos selecionados',
-    projectsSubtitle: 'Além do ERP, entreguei funis de vendas completos e sites de alta conversão para clientes de diferentes setores.',
-    projects: [
-      { tag: 'Funil digital × 3', title: 'Workflows para imóveis', desc: 'Funis digitais completos para vendedores de imóveis, ponta a ponta: Anúncio → landing page → CRM → ERP. Três pipelines em operação.', note: 'demo ao vivo sob solicitação' },
-      { tag: 'Landing pages × 5', title: 'Sites para advogados', desc: 'Cinco landing pages focadas em conversão para divulgação de advogados autônomos.', note: 'demo ao vivo sob solicitação' },
-      { tag: 'Web app', title: 'Cardápio digital', desc: 'Cardápio online desenvolvido para um restaurante, com navegação rápida e gestão de itens.', note: 'demo ao vivo sob solicitação' },
-      { tag: 'ERP completo', title: 'Boutique Drive', desc: 'Plataforma de gestão de obras, do orçamento ao canteiro, com previsão de gastos por IA. Sozinho, em produção.', note: '↑ veja o estudo de caso acima' },
-    ],
     caseFeaturesLabel: 'Funcionalidades',
     caseFeaturesDesc: 'Um software de gestão de obras completo do orçamento ao canteiro de obras, incluindo IA para análises e previsões de gastos.',
     caseScreenshotCaption: 'Boutique Drive — dashboard do projeto',
@@ -252,7 +225,7 @@
     footerNote: 'feito à mão, sem templates',
   };
   const en = {
-    navWork: 'work', navProjects: 'projects', navSkills: 'skills', navJourney: 'journey', navContact: 'contact',
+    navWork: 'work', navSkills: 'skills', navJourney: 'journey', navContact: 'contact',
     perYear: 'yr', perDay: 'day',
     role: 'Full Stack Software Developer',
     heroTagline: 'I build end-to-end products that move business metrics — from ad campaign to landing page to CRM to full ERP. Self-taught across the stack, I shipped a complete construction-management platform to production, solo. Now looking to bring that ownership to a strong team.',
@@ -275,14 +248,6 @@
     caseStatAds: 'annual ROI on paid-traffic campaigns for clients',
     caseStatSolo: 'conceived and shipped by a single developer',
     caseStatAuto: 'saved in daily operations through automation',
-    projectsTitle: 'Selected work',
-    projectsSubtitle: 'Beyond the ERP, I have delivered complete sales funnels and high-conversion sites for clients across different industries.',
-    projects: [
-      { tag: 'Growth funnel × 3', title: 'Real-estate sales workflows', desc: 'Complete end-to-end digital funnels for property sellers: Ad → landing page → CRM → ERP. Three pipelines in operation.', note: 'live demo on request' },
-      { tag: 'Landing pages × 5', title: 'Lawyer marketing sites', desc: 'Five conversion-focused landing pages to promote independent lawyers.', note: 'live demo on request' },
-      { tag: 'Web app', title: 'Restaurant digital menu', desc: 'Online menu built for a restaurant, with fast browsing and item management.', note: 'live demo on request' },
-      { tag: 'Full ERP', title: 'Boutique Drive', desc: 'Construction-management platform, budget to job site, with AI spend forecasting. Solo, in production.', note: '↑ see the case study above' },
-    ],
     caseFeaturesLabel: 'Features',
     caseFeaturesDesc: 'A complete construction-management platform covering everything from budgeting to the job site, including AI-driven spend analysis and forecasting.',
     caseScreenshotCaption: 'Boutique Drive — project dashboard',
@@ -319,11 +284,11 @@
   }
 
   const SIMPLE_KEYS = [
-    'navWork','navProjects','navSkills','navJourney','navContact',
+    'navWork','navSkills','navJourney','navContact',
     'role','heroTagline','workObs','caseFile','caseTitle','caseSubtitle',
     'caseProblemLabel','caseProblem','caseBuiltLabel','caseStackLabel',
     'caseStatAds','caseStatSolo','caseStatAuto','caseFeaturesLabel','caseFeaturesDesc','caseScreenshotCaption',
-    'projectsTitle','projectsSubtitle','skillsTitle','journeyTitle','journeySubtitle',
+    'skillsTitle','journeyTitle','journeySubtitle',
     'researchLabel','researchTitle','researchDesc','contactTitle','contactSubtitle','footerNote',
   ];
 
@@ -350,14 +315,6 @@
 
     document.getElementById('caseStack').innerHTML = caseStack.map((s) =>
       `<span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#d4dae2; border:1px solid #2a3644; border-radius:4px; padding:5px 10px;">${esc(s)}</span>`).join('');
-
-    document.getElementById('projectsGrid').innerHTML = t.projects.map((p) => `
-      <div class="card" style="background:#0f141a; border:1px solid #1c242e; border-radius:10px; padding:26px 28px; display:flex; flex-direction:column; gap:12px;">
-        <div style="font-family:'JetBrains Mono',monospace; font-size:11.5px; color:#4ade80; text-transform:uppercase; letter-spacing:.1em;">${esc(p.tag)}</div>
-        <div style="font-size:21px; font-weight:600; color:#f2f5f8; letter-spacing:-0.01em;">${esc(p.title)}</div>
-        <p style="font-size:14.5px; line-height:1.65; color:#8b96a5; margin:0; text-wrap:pretty;">${esc(p.desc)}</p>
-        <div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#5b6674; margin-top:auto;">${esc(p.note)}</div>
-      </div>`).join('');
 
     document.getElementById('skillsGrid').innerHTML = skillGroupsFor(lang).map((g) => `
       <div class="card" style="background:#0f141a; border:1px solid #1c242e; border-radius:10px; padding:24px 26px;">
